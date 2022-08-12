@@ -17,7 +17,7 @@ spec:
         - image: cloudzenix/shopizer
           name: javawebapp
           ports:
-          -  containerPort: 8080
+           - containerPort: 8080
 ---
 # Node Port Service
 apiVersion: v1
