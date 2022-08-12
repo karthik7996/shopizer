@@ -1,26 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    name: javawebapp
-  name: java-controller
+   name: javawebapp
 spec:
-  replicas: 1
-  selector:
+   replicas: 1
+   selector:
     matchLabels:
-    name: javawebapp
-  template:
-    metadata:
-     name: test-pod
-     labels:
-        name: javawebapp
-    spec:
+     name: javawebapp
+   template:
+     metadata:
+       name: test-pod
+       labels:
+         name: javawebapp
+     spec:
       containers:
-      - image: cloudzenix/shopizer
-        name: javawebapp
-        ports:
-        - name: javawebapp
-          containerPort: 8080
+        - image: cloudzenix/shopizer
+          name: javawebapp
+          ports:
+          -  containerPort: 8080
 ---
 # Node Port Service
 apiVersion: v1
@@ -36,3 +33,4 @@ spec:
       targetPort: 8080
   selector:
     name: javawebapp
+u
