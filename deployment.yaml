@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: Deployment
 kind: ReplicationController
 metadata:
   labels:
@@ -6,8 +6,12 @@ metadata:
   name: java-controller
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+    name: javawebapp
   template:
     metadata:
+     name: test-pod
       labels:
         name: javawebapp
     spec:
