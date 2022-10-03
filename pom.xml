@@ -79,14 +79,14 @@
 		<!-- jacoco coverage -->
 		<coverage.lines>.30</coverage.lines>
 		<coverage.branches>.37</coverage.branches>
-
-	</properties>
-	
-	
 	<properties>
           <sonar.organization>cloudzenix12</sonar.organization>
           <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-       </properties>
+        </properties>
+		
+	</properties>
+	
+
 
 	<!--BOM -->
 	<dependencyManagement>
